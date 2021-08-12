@@ -42,11 +42,11 @@ class _AddPegawaiPageState extends State<AddPegawaiPage> {
     });
     await Future.delayed(Duration(seconds: 2));
     http.Response res = await http.post(
-      Uri.parse("http://server-pegawai.indonesiafintechforum.org/addPegawai.php"),
+      Uri.parse("http://192.168.20.189/server_employee/addEmployee.php"),
       body: {
-        "namaPegawai": namaController.text,
-        "posisiPegawai": posisiController.text,
-        "gajiPegawai": gajiController.text,
+        "nama": namaController.text,
+        "posisi": posisiController.text,
+        "gaji": gajiController.text,
       },
     );
     setState(() {

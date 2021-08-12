@@ -47,11 +47,11 @@ class _HomePageState extends State<HomePage> {
     await Future.delayed(Duration(seconds: 2));
     http.Response res = await http.post(
       Uri.parse(
-          "http://server-pegawai.indonesiafintechforum.org/addPegawai.php"),
+          "http://192.168.20.189/server_employee/addPegawai.php"),
       body: {
-        "namaPegawai": namaController.text,
-        "posisiPegawai": posisiController.text,
-        "gajiPegawai": gajiController.text,
+        "nama": namaController.text,
+        "posisi": posisiController.text,
+        "gaji": gajiController.text,
       },
     );
     setState(() {
@@ -94,12 +94,12 @@ class _HomePageState extends State<HomePage> {
     await Future.delayed(Duration(seconds: 2));
     http.Response res = await http.post(
       Uri.parse(
-          "http://server-pegawai.indonesiafintechforum.org/editPegawai.php"),
+          "http://192.168.20.189/server_employee/editEmployee.php"),
       body: {
-        "idPegawai": widget.item['id'],
-        "namaPegawai": namaController.text,
-        "posisiPegawai": posisiController.text,
-        "gajiPegawai": gajiController.text,
+        "id": widget.item['id'],
+        "nama": namaController.text,
+        "posisi": posisiController.text,
+        "gaji": gajiController.text,
       },
     );
     setState(() {

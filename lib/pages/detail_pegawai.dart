@@ -12,9 +12,9 @@ class DetailPegawai extends StatelessWidget {
   Future<void> delete(context) async {
     http.Response res = await http.post(
       Uri.parse(
-          "http://server-pegawai.indonesiafintechforum.org/deletePegawai.php"),
+          "http://192.168.20.189/server_employee/deleteEmployee.php"),
       body: {
-        "idPegawai": this.item['id'],
+        "id": this.item['id'],
       },
     );
 

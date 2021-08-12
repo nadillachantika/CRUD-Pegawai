@@ -23,9 +23,8 @@ class _ListPegawai2State extends State<ListPegawai2> {
       loading = true;
     });
     http.Response res = await http.get(
-        Uri.parse(
-            "http://server-pegawai.indonesiafintechforum.org/getPegawai.php"));
-    setState(() {
+        Uri.parse("http://192.168.20.189/server_employee/getEmployee.php"));
+    setState((){
       loading = false;
     });
 
